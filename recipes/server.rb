@@ -1,3 +1,5 @@
+include_recipe 'java'
+
 version = node['riemann']['version']
 
 if platform?('ubuntu', 'debian')
