@@ -4,4 +4,4 @@ exec 2>&1
 ulimit -n 4096
 ulimit -a
 
-exec chpst -u riemann java -XX:+UseConcMarkSweepGC -jar /usr/lib/riemann/riemann.jar /etc/riemann/riemann.config
+exec chpst -u riemann java -server -Xms1024m -Xmx1024m -XX:+UseConcMarkSweepGC -jar /usr/lib/riemann/riemann.jar /etc/riemann/riemann.config
